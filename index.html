@@ -102,12 +102,21 @@
       color: white;
     }
 
-    #memo-container {
-      margin: 1em 0;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
+    
+#memo-container {
+  margin: 1em 0;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch; /* ← ここ */
+  width: 100%;          /* ← ここ */
+  max-width: 320px;
+}
+
+
+
+
+
+
 
     #memo-canvas {
       border: 1px solid #ccc;
@@ -118,14 +127,17 @@
     }
 
     #clearBtn {
-      margin-top: 0.5em;
-      padding: 0.3em 1em;
-      font-size: 1em;
-      border: none;
-      border-radius: 6px;
-      background: #e67e22;
-      color: white;
-    }
+  margin-top: 0.5em;
+  padding: 0.5em;
+  font-size: 1em;
+  border: none;
+  border-radius: 6px;
+  background: #e67e22;
+  color: white;
+  width: 100%;           /* ← 追加 */
+  white-space: nowrap;   /* ← 改行を防止 */
+  box-sizing: border-box;
+}
   </style>
 </head>
 <body>
